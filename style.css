@@ -1,0 +1,51 @@
+body {
+    background-color: #111;
+    font-family: Arial;
+    margin: 0;
+}
+
+h1 {
+    color: #fff;
+}
+
+h1 span {
+    color: #febe01;
+}
+
+p {
+    font-size: 18px;
+    color: #b2b2b2;
+}
+
+a {
+    color: #fff;
+}
+
+strong {
+    color: #febe01;
+}
+
+.botao {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: #febe01;
+    color: #332200;
+    border: 1px solid #332200;
+}
+
+.introducao {
+    padding: 40px;
+}
+
+.menu {
+    border-bottom: 2px solid #b2b2b2;
+    padding: 20px;
+}
+
+.link-ativo {
+    color: #b2b2b2;
+    text-decoration: none;
+}
