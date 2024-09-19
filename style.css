@@ -12,6 +12,11 @@ h1 span {
     color: #febe01;
 }
 
+h2 {
+    color: #fff;
+    margin: 0;
+}
+
 p {
     font-size: 18px;
     color: #b2b2b2;
@@ -21,13 +26,37 @@ a {
     color: #fff;
 }
 
+span {
+    color: #b2b2b2;
+}
+
 strong {
     color: #febe01;
 }
 
+label {
+    color: #fff;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input, textarea {
+    border: 1px solid #b2b2b2;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 300px;
+    resize: vertical;
+}
+
+/* Classes */
 .botao {
     display: inline-block;
-    padding: 20px;
+    padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
@@ -48,4 +77,28 @@ strong {
 .link-ativo {
     color: #b2b2b2;
     text-decoration: none;
+}
+
+.diario {
+    padding: 20px;
+    border-bottom: 1px solid #b2b2b2;
+    margin-bottom: 40px;
+}
+
+.formulario {
+    padding: 20px;
+}
+
+.formulario .botao {
+    display: block;
+    text-align: center;
+}
+
+.bloco-input {
+    margin-bottom: 10px;
+}
+
+.titulo {
+    text-align: center;
+    color: #febe01;
 }
