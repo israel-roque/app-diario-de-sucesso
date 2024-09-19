@@ -5,48 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diário de Sucesso | Diário</title>
     <link rel="stylesheet" href="style.css" />
+
+    <!-- production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   </head>
 
   <body>
-    <div class="menu">
-      <a href="index.html">Inicío</a>
-      <span>></span>
-      <a href="diario.html">Diário</a>
-      <span>></span>
-      <a href="#" class="link-ativo">Escrever</a>
-    </div>
-
-    <h1 class="titulo">Escreva seu diário</h1>
-
-    <div class="diario">
-      <h2>Como eu aprendi a importância de agradecer pelo que tenho</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-        aliquid voluptate nam quas distinctio? Fugit hic id iusto obcaecati.
-        Consectetur accusamus sint ratione tempora nesciunt alias similique
-        voluptatum repudiandae? Maiores?
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-        aliquid voluptate nam quas distinctio? Fugit hic id iusto obcaecati.
-        Consectetur accusamus sint ratione tempora nesciunt alias similique
-        voluptatum repudiandae? Maiores?
-      </p>
-    </div>
-
-    <div class="formulario">
-      <div class="bloco-input">
-        <label for="titulo-diario">E ai? Me conta como foi seu dia?</label>
-        <input type="text" id="titulo-diario">
+    <div id="app">
+      <div class="menu">
+        <a href="index.html">Inicío</a>
+        <span>></span>
+        <a href="diario.html">Diário</a>
+        <span>></span>
+        <a href="#" class="link-ativo">Escrever</a>
       </div>
 
-      <div class="bloco-input">
-        <label for="texto-diario">Detalhe tudo o que aconteceu hoje</label>
-        <textarea id="texto-diario"></textarea>
+      <h1 class="titulo">Escreva seu diário</h1>
+
+      <div class="diario">
+        <h2>{{ titulo }}</h2>
+        <p>
+          {{ diario }}
+        </p>
       </div>
 
-      <div class="bloco-input">
-        <a href="#" class="botao">Criar Diário</a>
+      <div class="formulario">
+        <div class="bloco-input">
+          <label for="titulo-diario">E ai? Me conta como foi seu dia?</label>
+          <input type="text" id="titulo-diario" v-on:input="espelhoTitulo" />
+        </div>
+
+        <div class="bloco-input">
+          <label for="texto-diario">Detalhe tudo o que aconteceu hoje</label>
+          <textarea id="texto-diario" v-on:input="espelhoDiario"></textarea>
+        </div>
+
+        <div class="bloco-input">
+          <a href="#" class="botao">Criar Diário</a>
+        </div>
       </div>
     </div>
+    <!--fim app-->
+
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          titulo: 'Insira um titulo',
+          diario: 'O que você digitar ali embaixo, vai aparecer aqui simultâneamente.'
+        },
+        methods: {
+          espelhoDiario: function(event) {
+            this.diario = event.target.value
+          },
+          espelhoTitulo: function(event) {
+            this.titulo = event.target.value
+          }
+        }
+      });
+    </script>
   </body>
 </html>
