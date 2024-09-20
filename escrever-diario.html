@@ -12,12 +12,12 @@
 
   <body>
     <div id="app">
-      <div class="menu">
+      <div class="c-breadcrumb">
         <a href="index.html">Inicío</a>
         <span>></span>
         <a href="diario.html">Diário</a>
         <span>></span>
-        <a href="#" class="link-ativo">Escrever</a>
+        <a href="#" class="c-breadcrumb__link is-active">Escrever</a>
       </div>
 
       <h1 class="titulo">Escreva seu diário</h1>
@@ -29,19 +29,19 @@
         </p>
       </div>
 
-      <div class="formulario">
-        <div class="bloco-input">
-          <label for="titulo-diario">E ai? Me conta como foi seu dia?</label>
-          <input type="text" id="titulo-diario" v-on:input="espelhoTitulo" />
+      <div class="c-form">
+        <div class="c-form__group">
+          <label class="c-form__label" for="titulo-diario">E ai? Me conta como foi seu dia?</label>
+          <input class="c-form__input" type="text" id="titulo-diario" v-on:input="espelhoTitulo" />
         </div>
 
         <div class="bloco-input">
-          <label for="texto-diario">Detalhe tudo o que aconteceu hoje</label>
-          <textarea id="texto-diario" v-on:input="espelhoDiario"></textarea>
+          <label class="c-form__label" for="texto-diario">Detalhe tudo o que aconteceu hoje</label>
+          <textarea class="c-form__textarea" id="texto-diario" v-on:input="espelhoDiario"></textarea>
         </div>
 
         <div class="bloco-input">
-          <a href="#" class="botao">Criar Diário</a>
+          <a href="#" class="c-button c-form__button">Criar Diário</a>
         </div>
       </div>
     </div>

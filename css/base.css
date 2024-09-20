@@ -1,0 +1,35 @@
+body {
+    background-color: var(--dark-color);
+    font-family: Arial;
+    margin: 0;
+}
+
+h1 {
+    color: var(--white-color);
+}
+
+h1 span {
+    color: var(--accent-color);
+}
+
+h2 {
+    color: var(--white-color);
+    margin: 0;
+}
+
+p {
+    font-size: 18px;
+    color: var(--gray-light-color);
+}
+
+a {
+    color: var(--white-color);
+}
+
+span {
+    color: var(--gray-light-color);
+}
+
+strong {
+    color: var(--accent-color);
+}
